@@ -66,9 +66,6 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'dealscraper.pipelines.DuplicatesPipeline': 1,
-    'dealscraper.pipelines.PriceNotNullPipeline': 2,
-    'dealscraper.pipelines.NameCleaningPipeline': 3,
-    'dealscraper.pipelines.DiscountCleaningPipeline': 4,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
