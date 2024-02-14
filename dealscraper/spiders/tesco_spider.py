@@ -26,6 +26,6 @@ class TescoSpider(scrapy.Spider):
 
         # Logic to handle the next page
         next_page = response.css('a.pagination--button.prev-next[name="go-to-results-page"]').attrib['href']
-        if 'page=51' not in next_page:
+        if 'page=288' not in next_page:
             next_page_url = 'https://www.tesco.com' + next_page
             yield response.follow(next_page_url, callback=self.parse)
