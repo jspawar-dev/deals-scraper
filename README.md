@@ -1,6 +1,6 @@
 ## Project Overview
 
-deal-scraper is an iOS application designed to address the cost of living crisis in the UK by helping users find the best deals and offers on essential items. The project aims to provide a user-friendly platform for discovering cost-effective options for groceries, household items, and personal care products.
+deals-scraper is an iOS application designed to address the cost of living crisis in the UK by helping users find the best deals and offers on essential items. The project aims to provide a user-friendly platform for discovering cost-effective options for groceries, household items, and personal care products.
 
 ## Aims
 
