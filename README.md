@@ -1,24 +1,8 @@
 ## Project Overview
 
-deals-scraper is a web application designed to address the cost of living crisis in the UK by helping users find the best deals and offers on essential items. The project aims to provide a user-friendly platform for discovering cost-effective options for groceries, household items, and personal care products.
+The artifact proposes a full stack web application that can be utilised to help individuals navigate through the cost-of-living crisis. This is a vital problem to solve as Brexit and Covid-19 negatively impacted the economy and caused disruptions to supply chains. This disruption slowed down the importation of produce into the UK, which led to food inflation. The solution proposed is to create an application that extracts data of discounted products across major supermarkets and streamline the process of finding these deals through a simple website. This website will allow users to sign up and search the database for products they want to find deals for. They can add those items to the digital shopping list or navigate to the original website. The digital shopping list servers as checklist that can be used while shopping in person to find deals and focus on buying whatever is on the shopping list rather than shopping without a plan and getting drawn in by all the advertisements that encourage customers to spend more. 
 
 ## Aims
-
-1. **Aggregation of Deals:**
-   - Develop a web scraping mechanism to aggregate deals and offers from various UK-based online platforms and retailers.
-
-2. **User-Friendly Interface:**
-   - Design and implement an intuitive iOS application interface that allows users to easily search for deals, browse categories, and access detailed deal information.
-
-3. **Real-time Updates:**
-   - Implement a real-time update system to ensure that the information on deals and offers is accurate and up-to-date.
-
-4. **Price Comparison:**
-   - Enable users to compare prices for the same or similar items across different online platforms, empowering them to make informed decisions on their purchases.
-
-5. **Notification System:**
-   - Implement a notification system to alert users about new deals, special promotions, or price drops based on their preferences, fostering user engagement.
-
-6. **Legal Compliance:**
-   - Ensure that web scraping activities adhere to legal and ethical standards, respecting the terms of use of the websites being scraped.
-
+1.	Create a full stack web application, that extracts up to date deals from supermarkets, and displays them through a user-friendly web application, aimed to streamline the process of finding discounts on essential food products.
+2.	Support individuals affected by economic constraints by finding discounts on healthier, high-quality foods, which will reduce the reliance on cheap, low-quality foods, take aways, pre-cooked meals that negatively impact their health.
+3.	Healthcare organizations can leverage this tool as a resource to encourage healthy eating among communities affected by the costs of living crisis. Food banks that provide food to thousands of people can, promote a tool like this to donators who can save money while donating to those impacted the most.
