@@ -7,3 +7,17 @@ This project proposes a full-stack web application designed to assist individual
 2. **Support Individuals Affected by Economic Constraints:** The platform will help users find discounts on high-quality, healthier food options, reducing the need to rely on unhealthy, low-quality alternatives such as fast food, takeaways, or pre-cooked meals.
 
 3. **Encourage Healthier Eating:** This tool can be utilized by healthcare organizations and food banks to promote healthier diets among communities severely impacted by the rising cost of living. By highlighting discounts, this platform allows users and donators to save money while contributing to a healthier lifestyle.
+
+
+# Website Preview
+![image](https://github.com/user-attachments/assets/7f805b84-5b9b-4cec-aa17-bf5c08d33cdf)
+
+Figure 1 shows search results for "milk"
+
+
+
+![image](https://github.com/user-attachments/assets/93fc7e1e-30dc-4fb4-b16b-f29246c91b85)
+
+Figure 2 shows users shopping list
+
+
