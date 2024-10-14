@@ -7,20 +7,20 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_required, current_user
 from sqlalchemy import and_
 
-
+# home page
 @app.route('/')
 @app.route('/home')
 def home_page():
     return render_template('home.html')
 
-
+# products page
 @app.route('/products')
 @login_required
 def products_page():
     items = Products.query.limit(48).all()
     return render_template('products.html', items=items)
 
-
+# allows you to search for an item
 @app.route('/search', methods=['GET', 'POST'])
 @login_required
 def search():
@@ -28,7 +28,7 @@ def search():
     items = Products.query.filter(Products.name.like(f'%{search_term}%')).all()
     return render_template('products.html', items=items)
 
-
+# registration page
 @app.route('/register', methods=['GET', 'POST'])
 def register_page():
     form = RegisterForm()
@@ -46,7 +46,7 @@ def register_page():
             flash(f'There was an error with creating a user: {err_msg}', category='danger')
     return render_template('register.html', form=form)
 
-
+# login page
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     form = LoginForm()
@@ -61,7 +61,7 @@ def login_page():
 
     return render_template('login.html', form=form)
 
-
+# logout
 @app.route('/logout')
 def logout_page():
     logout_user()
@@ -75,7 +75,7 @@ def shopping_list_page():
     items = current_user.shopping_list
     return render_template('shopping_list.html', items=items)
 
-
+# allows you to add items into a shopping list
 @app.route('/add_to_shopping_list/<int:product_id>')
 @login_required
 def add_to_shopping_list(product_id):
@@ -85,7 +85,7 @@ def add_to_shopping_list(product_id):
     flash(f'{product.name} added to your shopping list!', category='success')
     return redirect(url_for('products_page'))
 
-
+# allows you to remove items youve added into your shopping list
 @app.route('/remove_from_shopping_list/<int:product_id>')
 @login_required
 def remove_from_shopping_list(product_id):
