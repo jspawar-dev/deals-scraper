@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
 from market.models import User
 
-
+# allows user to create an account
 class RegisterForm(FlaskForm):
 
     def validate_username(self, username_to_check):
@@ -22,7 +22,7 @@ class RegisterForm(FlaskForm):
     password2 = PasswordField(label='Confirm Password', validators=[EqualTo('password1'), DataRequired()])
     submit = SubmitField(label='Sign Up')
 
-
+# allows user to log into an account
 class LoginForm(FlaskForm):
     username = StringField(label='Username', validators=[DataRequired()])
     password = PasswordField(label='Password', validators=[DataRequired()])
