@@ -21,7 +21,7 @@ class TescoSpider(scrapy.Spider):
 
             yield loader.load_item()
 
-        # Logic to handle the next page
+        # Logic to handle the next page, currently stops at 50 pages to prevent sending too many requests to the supermarkets servers.
         next_page = response.css('a.pagination--button.prev-next[name="go-to-results-page"]').attrib['href']
         if 'page=51' not in next_page:
             next_page_url = 'https://www.tesco.com' + next_page
