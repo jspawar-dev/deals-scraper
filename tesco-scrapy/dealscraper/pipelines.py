@@ -2,7 +2,8 @@ from itemadapter import ItemAdapter
 from scrapy.exceptions import DropItem
 import mysql.connector
 
-
+# removes the word 'tesco' from items aswell as random white space.
+# Makes the scraped items easier to read.
 class DataCleanerPipeline:
 
     def process_item(self, item, spider):
@@ -16,7 +17,7 @@ class DataCleanerPipeline:
 
         return item
 
-
+# looks for any duplicate items and removes them.
 class DuplicatesPipeline:
 
     def __init__(self):
@@ -38,7 +39,7 @@ class DuplicatesPipeline:
             self.names_seen.add(adapter['name'])
             return item
 
-
+# This connects to the database and stores all the items into a table once theyve all been processed and cleaned.
 class SavingToMySQLPipeline(object):
 
     def __init__(self):
