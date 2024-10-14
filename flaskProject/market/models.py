@@ -11,7 +11,7 @@ shopping_list = db.Table('shopping_list',
                          db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
                          db.Column('product_id', db.Integer, db.ForeignKey('products.id')))
 
-
+# creates a User table within the database. This holds information about the user, which includes their personal details aswell as the items in their shopping list.
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(30), nullable=False, unique=True)
@@ -20,7 +20,7 @@ class User(db.Model, UserMixin):
     items = db.relationship('Products', backref='owned', lazy=True)
     shopping_list = db.relationship('Products', secondary=shopping_list, backref=db.backref('users', lazy=True))
 
-
+# This is the table within the database that has all the discounts stored from the web scraper.
 class Products(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(100), nullable=False, unique=True)
